@@ -1,13 +1,5 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
-<html>
-<head>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>Login</title>
-</head>
-<body>
-	<form action="login.jsp">
+
+	<form method = "POST" action="LoginServlet">
 		username: <input type="text" name="username">
 		password: <input type="password" name="password">
 		<input type="button" value="cancel">
@@ -18,7 +10,7 @@
 </body>
 <%
 
-if (request.getParameter("submitform") != null) {
+/* if (request.getParameter("submitform") != null) {
 	String username = "abc";
 	String password = "123";
 	//out.println(request.getParameter("username") + request.getParameter("password"));
@@ -30,7 +22,7 @@ if (username.equals(request.getParameter("username")) && password.equals(request
 	} else {
 		out.println("<Script>alert('密码错误')</script>");
 	} 
-}
+} */
 	/*
 	String username = request.getParameter("username");
 	sql = "SELECT * FROM user WHERE name=" + "'" + username + "'";
@@ -48,4 +40,4 @@ if (username.equals(request.getParameter("username")) && password.equals(request
 	*/
 
 %>
-</html>
+

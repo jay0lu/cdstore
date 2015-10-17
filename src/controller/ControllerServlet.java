@@ -1,6 +1,8 @@
 package controller;
 
 import java.io.IOException;
+import java.io.PrintWriter;
+
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -47,11 +49,8 @@ public class ControllerServlet extends HttpServlet {
 	        } else if (userPath.equals("/checkout")) {
 	            // TODO: Implement checkout page request
 
-	        // if user switches language
-	        } else if (userPath.equals("/chooseLanguage")) {
-	            // TODO: Implement language request
-
 	        }
+	        
 
 	        // use RequestDispatcher to forward request internally
 	        String url = "/WEB-INF/view" + userPath + ".jsp";
@@ -89,7 +88,13 @@ public class ControllerServlet extends HttpServlet {
             // TODO: Implement purchase action
 
             userPath = "/confirmation";
-        }
+        
+	    // if user login
+        } else if (userPath.equals("/login")) {
+	        // TODO: Implement language request
+	    	userPath = "/login";
+	    	
+	    }
 
         // use RequestDispatcher to forward request internally
         String url = "/WEB-INF/view" + userPath + ".jsp";

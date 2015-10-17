@@ -1,7 +1,7 @@
 
 <%
 if(session.getAttribute("usersessionID") == null){
-	out.println("<script>alert('Session Missing');window.location.href='http://localhost:8080/cdstore/login.jsp';</script>");
+	out.println("<script>alert('Session Missing');window.location.href='http://localhost:8080/cdstore/login';</script>");
 }
 %>
 
