@@ -3,22 +3,17 @@ package bean;
 public class CD {
 	private int cdid;
 	private String title;
+	private String singer;
 	private double price;
 	private String category;
 	
-	public void CD(int cdid, String title, double price, String category) {
+	public void CD(int cdid, String title, String singer, double price, String category) {
 		this.cdid = cdid;
 		this.title = title;
+		this.singer = singer;
 		this.price = price;
 		this.category = category;
 	}
-	
-	//Allowed cd with no category
-//	public void CD(int cdid, String title, double price) {
-//	    this.cdid = cdid;
-//		this.title = title;
-//		this.price = price;
-//	}
 
 	public int getCdid() {
 		return cdid;
@@ -28,6 +23,14 @@ public class CD {
 		this.cdid = cdid;
 	}
 	
+	public String getSinger() {
+		return singer;
+	}
+
+	public void setSinger(String singer) {
+		this.singer = singer;
+	}
+
 	public String gettitle() {
 		return title;
 	}
