@@ -9,7 +9,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
-import dao.UserDAO;
+import dao.CDDao;
  
 public class CDControllerServlet extends HttpServlet {
      
@@ -23,7 +23,34 @@ public class CDControllerServlet extends HttpServlet {
         String category = request.getParameter("category");
         String singer = request.getParameter("singer");
         double price = Double.valueOf(request.getParameter("price"));
+    
+        try {
+            CDDao cdDao = new CDDao();
+            boolean success = cdDao.addCD(title, singer, price, category);
+            
+//            // change
+//            String nextJSP;
+//            if (success){
+//            	nextJSP = "/success.jsp";
+//            }
+//            else {
+//            	nextJSP = "/failed.jsp";
+//            }
+//            
+//            HttpSession session = request.getSession();
+//            session.setAttribute("userName", userName); 
+//            
+//            //response.sendRedirect("/HibernateWebApp/success.jsp");
+//            
+//            RequestDispatcher dispatcher = getServletContext().getRequestDispatcher(nextJSP);
+//            dispatcher.forward(request,response);
+//         
+        } catch (Exception e) {
+ 
+            e.printStackTrace();
+        }
     }
+    
 	/**
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
