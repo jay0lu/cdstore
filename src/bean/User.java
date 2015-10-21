@@ -1,4 +1,4 @@
-package com.luzheng.model;
+package bean;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;

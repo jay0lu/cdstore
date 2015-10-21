@@ -9,6 +9,8 @@ import org.hibernate.boot.registry.StandardServiceRegistryBuilder;
 import org.hibernate.cfg.Configuration;
 
 import antlr.collections.List;
+import bean.User;
+
 import com.luzheng.model.*;
 
 //import dao.*;
