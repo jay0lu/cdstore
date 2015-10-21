@@ -11,9 +11,8 @@ import org.hibernate.cfg.Configuration;
 import antlr.collections.List;
 import bean.User;
 
-import com.luzheng.model.*;
 
-//import dao.*;
+import bean.User;
  
 public class UserDAO {
  
