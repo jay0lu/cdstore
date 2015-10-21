@@ -9,13 +9,13 @@ import org.hibernate.boot.registry.StandardServiceRegistryBuilder;
 import org.hibernate.cfg.Configuration;
 
 import antlr.collections.List;
+import com.luzheng.model.*;
 
-import bean.User;
+//import dao.*;
  
 public class UserDAO {
  
-    public boolean addUserDetails(String userName, String password, String email,
-            String phone, String city) {
+    public boolean addUserDetails(String userName, String password, String email, String phone, String city) {
         try {
             // 1. configuring hibernate
         	Configuration  configuration = new Configuration ().configure();
@@ -29,9 +29,11 @@ public class UserDAO {
  
             // 4. Starting Transaction
             Transaction transaction = session.beginTransaction();
+            
             User user = new User();
+            
             user.setUserName(userName);
-            user.setPassword1(password);
+            user.setPassword(password);
             user.setEmail(email);
             user.setCity(city);
             user.setPhone(phone);

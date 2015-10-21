@@ -1,6 +1,6 @@
 
-	<form method = "POST" action="LoginServlet">
-		username: <input type="text" name="username">
+	<form method = "POST" action="user">
+		username: <input type="text" name="userName">
 		password: <input type="password" name="password">
 		<input type="button" value="cancel">
 		<input type="submit" name="submitform" value="submit">
