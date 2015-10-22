@@ -3,18 +3,19 @@ package bean;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
-import javax.persistence.*;
+//import javax.persistence.*;
  
 @Entity
 public class User {
-	@Id @GeneratedValue
+	@Id 
+	@GeneratedValue
     private int id;
     
 	private String userName;
     private String password;
     private String email;
     private String phone;
-    private String city;
+    private String address;
  
     public int getId() {
         return id;
@@ -56,12 +57,12 @@ public class User {
         this.phone = phone;
     }
  
-    public String getCity() {
-        return city;
+    public String getaddress() {
+        return address;
     }
  
-    public void setCity(String city) {
-        this.city = city;
+    public void setaddress(String address) {
+        this.address = address;
     }
    
 }

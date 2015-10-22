@@ -1,7 +1,17 @@
 package bean;
 
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+//import javax.persistence.*;
+ 
+@Entity
 public class CD {
+	@Id 
+	@GeneratedValue
+	
 	private int cdid;
+	
 	private String title;
 	private String singer;
 	private double price;

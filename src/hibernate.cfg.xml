@@ -17,11 +17,10 @@
         <property name="show_sql">true</property>
         <property name="format_sql">true</property>
         <property name="hbm2ddl.auto">update</property>
-        
-		<mapping package="bean" />
-		
-		<mapping class="bean.CD" />
-		<mapping class="com.luzheng.model.Usergu"/>
+        		
+		<mapping class="bean.CD"/>
+		<mapping class="bean.User"/>
+		<mapping class="bean.Order"/>
 		
     </session-factory>
     

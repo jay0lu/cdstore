@@ -23,12 +23,12 @@ public class UserControllerServlet extends HttpServlet {
         String password = request.getParameter("password");
         String email = request.getParameter("email");
         String phone = request.getParameter("phone");
-        String city = request.getParameter("city");
+        String address = request. getParameter("address");
  
         
         try {
             UserDAO userDAO = new UserDAO();
-            boolean success = userDAO.addUserDetails(userName, password, email, phone, city);
+            boolean success = userDAO.addUserDetails(userName, password, email, phone, address);
             
             
             String nextJSP;
